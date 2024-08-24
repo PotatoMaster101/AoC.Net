@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Authors>PotatoMaster101</Authors>
+    <Copyright>© PotatoMaster101 2024</Copyright>
+    <FileVersion>1.0.0</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/PotatoMaster101/AoC.Net</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/PotatoMaster101/AoC.Net</RepositoryUrl>
+    <TargetFramework>net8.0</TargetFramework>
+    <Title>AoC.NET</Title>
+  </PropertyGroup>
+
+</Project>

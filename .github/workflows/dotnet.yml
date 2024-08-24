@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '.gitignore'
+      - 'LISENSE'
+      - 'README.md'
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - '.gitignore'
+      - 'LISENSE'
+      - 'README.md'
+
+jobs:
+  build-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        dotnet: ['8.0.x']
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET ${{ matrix.dotnet }}
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ matrix.dotnet }}
+    - name: Build
+      run: dotnet build -c Release
+    - name: Test
+      run: dotnet test -c Release --verbosity normal
